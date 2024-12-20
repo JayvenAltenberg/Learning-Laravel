@@ -17,7 +17,7 @@ class Job extends Model
 
     //this is used to protect the form from being filled with wrong data
     //a example of this is when the user fills the form with a code that fills the admin table with 1 when u dont want them to have admin
-    protected $fillebale = ['title', 'salary'];
+    protected $fillable = ['title', 'salary', 'location', 'company', 'employer_id'];
 
     public function employer()
     {

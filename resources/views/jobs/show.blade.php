@@ -11,20 +11,26 @@
         
         <!-- Job Details -->
         <div class="text-gray-400">
-            <p><strong class="text-white">Company: </strong>{{$job['company']}}</p>
-            <p><strong class="text-white">Location: </strong> {{$job['location']}}</p>
-            <p><strong class="text-white">Salary: </strong>${{$job['salary']}}</p>
+            <p><strong class="text-white">Company: </strong>{{$job->company}}</p>
+            <p><strong class="text-white">Location: </strong> {{$job->location}}</p>
+            <p><strong class="text-white">Salary: </strong>${{$job->salary}}</p>
             <p><strong class="text-white">employer: </strong>{{$job->employer->name}}</p>
             
         </div>
 
+
         <!-- Apply Button -->
-        <div class="mt-6">
-            <a href="#" 
-                class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <div class="flex justify-between items-center">
+            <a href="#"
+               class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 Apply Now
             </a>
+            <a href="/job/{{ $job['id'] }}"
+               class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 ml-auto">
+                More Info
+            </a>
         </div>
+        
     </div>
 </div>
 

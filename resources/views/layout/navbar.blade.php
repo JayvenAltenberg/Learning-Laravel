@@ -4,10 +4,11 @@
 
         <!-- Links (hidden on mobile) -->
         <div class="hidden md:flex space-x-6">
-            <a href="#" class="hover:text-gray-400">Home</a>
+            <a href="/jobs" class="hover:text-gray-400">Home</a>
             <a href="#" class="hover:text-gray-400">About</a>
             <a href="#" class="hover:text-gray-400">Services</a>
             <a href="#" class="hover:text-gray-400">Contact</a>
+            <a href="/job/create" class="hover:text-gray-400">Create job</a>
         </div>
 
         <!-- Mobile Menu Button -->
