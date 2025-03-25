@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-900 text-white flex flex-col min-h-screen">
 
-@include('layout.navbar')
+@include('components.navbar')
 @yield('content')
 
 </body>

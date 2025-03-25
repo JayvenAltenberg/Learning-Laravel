@@ -18,4 +18,9 @@ class Employer extends Model
         // Example: $employer->jobs->first() gives the first job,
         //          foreach ($employer->jobs as $job) iterates through all jobs
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);        
+    }
 }

@@ -1,0 +1,2 @@
+{{-- <input type="text" id="salary" name="salary" class="w-full p-2 mt-2 rounded-md bg-gray-700 text-white focus:outline-none" value="{{ $job->salary }}"> --}}
+<input {{$attributes->merge(["class"=>"w-full p-2 mt-2 rounded-md bg-gray-700 text-white focus:outline-none"])}} value="{{ $attributes->get('value') }}">

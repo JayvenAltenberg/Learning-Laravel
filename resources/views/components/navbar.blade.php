@@ -1,14 +1,28 @@
 <nav class="w-full bg-gray-800 p-4 shadow-md mb-8">
     <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold text-white hover:text-gray-400">MyLogo</a>
 
-        <!-- Links (hidden on mobile) -->
+        <!-- Links -->
         <div class="hidden md:flex space-x-6">
             <a href="/jobs" class="hover:text-gray-400">Home</a>
             <a href="#" class="hover:text-gray-400">About</a>
             <a href="#" class="hover:text-gray-400">Services</a>
             <a href="#" class="hover:text-gray-400">Contact</a>
-            <a href="/job/create" class="hover:text-gray-400">Create job</a>
+            <a href="/job/create" class="hover:text-gray-400">Create Job</a>
+        </div>
+
+        <!-- Guest Links and logout -->
+        <div class="hidden md:flex space-x-6 ml-auto">
+            @guest
+                <a href="/register" class="hover:text-gray-400">Register</a>
+                <a href="/login" class="hover:text-gray-400">Login</a>
+            @endguest
+
+            @auth
+                <form method="POST" action="/logout">
+                    @csrf
+                    <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none">Logout</button>   
+                </form>    
+            @endauth
         </div>
 
         <!-- Mobile Menu Button -->
